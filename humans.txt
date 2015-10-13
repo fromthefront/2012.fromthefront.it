@@ -1,0 +1,15 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+/* TEAM */
+  Art Director: Diego Sessa
+  Twitter: @diesign
+
+  Web Interface Developer: Andrea Verlicchi
+  Site: www.andreaverlicchi.eu
+  Twitter: @verlok
+  Location: Bologna, Italy
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Modernizr, PrefixFree

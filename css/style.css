@@ -1,0 +1,438 @@
+/* HTML5 ✰ Boilerplate
+ * ==|== normalize ==========================================================
+ */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block }
+html { font-size: 100%; overflow-y: scroll }
+body { margin: 0; font-size: 14px; line-height: 1.231 }
+
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none }
+::selection { background: #fe57a1; color: #fff; text-shadow: none }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px }
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle }
+
+/**/
+
+@font-face {
+    font-family: 'CaslonAntiqueRegular';
+    src: url('cas_antn-webfont.eot');
+    src: url('cas_antn-webfont.eot?#iefix') format('embedded-opentype'),
+         url('cas_antn-webfont.woff') format('woff'),
+         url('cas_antn-webfont.ttf') format('truetype'),
+         url('cas_antn-webfont.svg#CaslonAntiqueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ==|== primary styles ===================================================== */
+
+html {
+	height:100%;
+}
+
+body {
+	height:100%; width:100%;
+	overflow: hidden;
+	font-family: 'CaslonAntiqueRegular';
+	text-transform: uppercase;
+	min-height: 725px;
+	position: relative;
+	background-color :#68C3D5;
+}
+
+.backgroundsize body {
+	background-image: url('../img/sky.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-attachment: fixed;
+}
+
+/* ==|== layout ============================================================= */
+
+/* Sprite */
+
+#logo_ftf,
+#clouds span,
+#ground,
+#ship span {
+	background: url('../img/csg-4f1c4905270b5.png') no-repeat top left;
+}
+
+/* FTF presents */
+
+#ftfPresents {
+	position: absolute;
+	left: 50%; top: 10%;
+	margin-left: -87px; margin-top: -65px;
+}
+
+#ftfPresents .text {
+	display: block;
+	color: rgba(255,255,255,0.5);
+	text-align: center;
+	margin-top: 3px;
+}
+
+#logo_ftf {
+	background-position: 0 -394px; width: 175px; height: 107px;
+	width: 175px;
+	height: 107px;
+}
+
+/* Main content */
+
+#treasure {
+	position: absolute;
+	left: 50%; top: 43%;
+	width: 668px; height: 370px;
+	margin-left: -334px; margin-top: -185px;
+}
+
+#treasure img {
+	z-index:5;
+	position: relative;
+}
+
+#treasure .summary {
+	display: none;
+}
+
+#treasure .eventType {
+	position: absolute;
+	left: 290px; top: 300px;
+	font-size: 190%;
+}
+
+/* Treasure animation */
+
+/* 
+NOTE about choices about ANIMATIONS which start entering the page:
+----
+* rule with no .cssanimations/nocssanimations class contains rules for animation frame 0,
+  assuming browser supports them, penalizing (perhaps) browsers which don't, 
+  to avoid the animation show the last frame for a flash time
+* .cssanimations class makes animation start once modernirz detected animations, so delays them
+  to avoid losing initial frames. The animation stops at the final frame
+* .nocssanimations class makes thing look like in final frame in browsers
+  that don't support animations. Note that no FOUC happens if animated properties are not available.
+*/
+
+@keyframes splash {
+	0%  { transform  : scale(0.1) }
+	50%  { transform : scale(1.1); animation-timing-function: ease-in }
+	75%  { transform : scale(0.9); animation-timing-function: ease-in-out }
+	100%  { transform: scale(1);   animation-timing-function: ease-in-out }
+}
+
+#treasure img {
+	/* Initial frame status */
+	transform: scale(0.1); 
+}
+
+.cssanimations #treasure img {
+	/* Animation */
+	animation: splash 1s 0.2s forwards;
+}
+
+.no-cssanimations #treasure img {
+	/* Final frame status */
+	transform: scale(1);
+}
+
+/* Clouds */
+
+#clouds span {
+	background-position: 0 0; width: 530px; height: 180px;
+	position: absolute;
+}
+
+#clouds .c1 {
+	width: 206px; height: 89px;
+	left: -75px; top: -38px;
+	z-index:3;
+}
+
+#clouds .c2 {
+	background-position: -260px 0px;
+	width: 270px; height: 102px;
+	left: 577px; top: 200px;
+	z-index:8;
+}
+#clouds .c3 {
+	background-position: 0px -99px;
+	width: 255px; height: 81px;
+	left: -95px; top: 278px;
+	z-index:3;
+}
+
+#clouds .c4 {
+	background-position: -272px -114px;
+	width: 129px; height: 56px;
+	left: 504px; top: 500px;
+	z-index:8;
+}
+
+/* Clouds animation */
+
+@keyframes cloudA {
+	0%   { transform: translate(0px) }
+	100% { transform: translate(50px) }
+}
+
+@keyframes cloudB {
+	0%   { transform: translate(0px) }
+	100% { transform: translate(100px) }
+}
+
+#clouds .c1,
+#clouds .c4 {
+	animation: cloudA 15s 0s infinite alternate ease-in-out;
+}
+
+#clouds .c2,
+#clouds .c3 {
+	animation: cloudB 15s 0s infinite alternate ease-in-out;
+}
+
+/* Event info */
+
+#eventInfo {
+	position: absolute;
+	top: 67%; width: 100%;
+	font-size: 265%;
+	text-align: center;
+}
+
+#eventInfo .nth {
+	font-size:60%;
+	vertical-align: 10px;
+}
+
+
+/* Footer */
+
+#horizon {
+	position: absolute;
+	left: 0; bottom: 0;
+	width: 100%; height: 114px;
+}
+
+#ground {
+	background-position: center -230px; width: 1345px; height: 114px;
+	position: absolute;
+	width: 100%; height: 114px;
+	z-index: 10;
+}
+
+
+/* Smoke container */
+
+#smoke {
+	position: absolute;
+	z-index: 3;
+	width: 1px; height: 100px;
+	left: 50%; bottom: 70px;
+}
+
+.no-cssanimations #smoke {
+	width: 50px;
+	margin-left:-25px;
+	bottom: 85px;
+	background: url('../img/smokeNoAni.png') no-repeat center bottom;
+}
+
+/* Smoke ball */
+
+.cssanimations #smoke span { 
+	display: block;
+	position: absolute;
+	bottom: 0; left: 50%; margin-left:-20px;
+	height: 0px; width: 0px;
+	border: 20px solid #4b4b4b;
+	border-radius: 20px;
+	left: 0px; opacity: 0;
+	transform:scale(0.2);
+}
+
+/* Smoke animation */
+
+@keyframes smokeL {
+	0%   { bottom: 0px; transform:scale(0.2) }
+	10%  { opacity: 1; bottom: 3px }
+	100% { left: -10px; opacity: 0; bottom: 70px; transform:scale(1) }
+}
+
+@keyframes smokeR {
+	0%   { bottom: 0px; transform:scale(0.2) }
+	10%  { opacity: 1; bottom: 3px }
+	100% { left: 10px; opacity: 0; bottom: 70px; transform:scale(1) }
+}
+
+#smoke .s0 { animation: smokeL 10s 0s infinite }
+#smoke .s1 { animation: smokeR 10s 1s infinite }
+#smoke .s2 { animation: smokeL 10s 2s infinite }
+#smoke .s3 { animation: smokeR 10s 3s infinite }
+#smoke .s4 { animation: smokeL 10s 4s infinite }
+#smoke .s5 { animation: smokeR 10s 5s infinite }
+#smoke .s6 { animation: smokeL 10s 6s infinite }
+#smoke .s7 { animation: smokeR 10s 7s infinite }
+#smoke .s8 { animation: smokeL 10s 8s infinite }
+#smoke .s9 { animation: smokeR 10s 9s infinite }
+
+
+/* Ship container */
+
+#ship {
+	position: absolute;
+	left: 50%; bottom: 42px;
+	margin-left: 227px;
+	z-index:9;
+}
+
+#ship span {
+	background-position: 0 -551px; width: 79px; height: 84px;
+	display: block;
+	width: 79px; height: 84px;
+}
+
+/* Ship animation */
+
+@keyframes ship {
+	0%   { transform: rotate(-5deg) }
+	100% { transform: rotate(5deg) }
+}
+
+#ship span {
+	animation: ship 2.5s 0s infinite alternate ease-in-out;
+	transform-origin: 50% 94px;
+}
+
+
+/* ==|== non-semantic helper classes ======================================== */
+
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr }
+.ir br { display: none }
+.clearfix:before, .clearfix:after { content: ""; display: table }
+.clearfix:after { clear: both }
+.clearfix { zoom: 1 }
+
+
+/* ==|== media queries ====================================================== */
+
+.mqDebug #horizon:after {
+	position: fixed;
+	bottom: 0; right: 0;
+	background: rgba(0,0,0,0.8);
+	width: 200px;
+	content: 'Standard';
+	font-family: sans-serif;
+	font-size: 80%;
+	line-height: 1.5em;
+	text-align: center;
+	z-index: 99;
+	color: white;
+	text-transform: none;
+}
+
+@media only screen and (max-width: 480px) {
+
+	.mqDebug #horizon:after {
+		content: 'max-width: 480px';
+	}
+
+	body {
+		font-size:60%;
+		min-height: 0;
+		overflow: initial;
+	}
+
+	#logo_ftf,
+	#ftfPresents, 
+	#treasure, 
+	#treasure img, 
+	#treasure .summary, 
+	#treasure .eventType, 
+	#eventInfo {
+		position: static;
+		top: none; left: none;
+		margin:0 auto;
+		text-align: center;
+	}
+
+	#logo_ftf, #treasure, #eventInfo {
+		margin: 1em auto;
+	}
+
+	#treasure {
+		height: auto;
+	}
+
+	#clouds {
+		display:none;
+	}
+
+	#treasure {
+		width: 90%;
+		position: static;
+	}
+
+	#treasure img {
+		width: 100%;
+		height: auto;
+		transform: none;
+		animation: none;
+	}
+
+	#horizon {
+		position: relative;
+	}
+
+	#ship {
+		display: none;
+	}
+
+}
+
+@media only screen and (max-height: 725px) and (min-width: 481px) {
+	
+	body {
+		min-height: 700px;
+		min-width: 700px;
+	}
+
+	#treasure {
+		top:47%;
+	}
+
+	#eventInfo {
+		top:74%;
+	}
+
+	#eventInfo time,
+	#eventInfo div {
+		display: inline;
+	}
+
+	#eventInfo div:before {
+		content:' - ';
+	}
+}
+
+
+/* ==|== print styles ======================================================= */
+ 
+@media print {
+	* { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important } 
+	a, a:visited { text-decoration: underline }
+	a[href]:after { content: " (" attr(href) ")" }
+	abbr[title]:after { content: " (" attr(title) ")" }
+	.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: "" } 
+	pre, blockquote { border: 1px solid #999; page-break-inside: avoid }
+	thead { display: table-header-group }
+	tr, img { page-break-inside: avoid }
+	img { max-width: 100% !important }
+	@page { margin: 0.5cm }
+	p, h2, h3 { orphans: 3; widows: 3 }
+	h2, h3 { page-break-after: avoid }
+}
