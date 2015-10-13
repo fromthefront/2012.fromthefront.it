@@ -1,0 +1,46 @@
+<html>
+<!--
+This page is on the same domain as the parent, so can
+communicate with it to order the iframe window resizing
+to fit the content
+-->
+  <body onload="parentIframeResize()">
+    <script>
+      var a;
+
+      try {
+        // deal with older browsers
+        var doc = parent.parent.document ||  parent.parent.contentDocument || parent.parent.contentWindow.document;
+        a = doc.body.innerHTML;
+      } catch(err){
+        // do nothing
+      }
+
+      if (!a){
+        console.log("domain is different");
+        window.top.location = 'http://google.com';
+      }
+
+      // Tell the parent iframe what height the iframe needs to be
+      function parentIframeResize()
+      {
+       	var height = getParam('height');
+        if(height != '')
+                parent.parent.resizeIframe(height);
+      }
+
+      // Helper function, parse param from request string
+      function getParam( name )
+      {
+       	name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+        var regexS = "[\\?&]"+name+"=([^&#]*)";
+        var regex = new RegExp( regexS );
+        var results = regex.exec( window.location.href );
+        if( results == null )
+          return "";
+        else
+          return results[1];
+      }
+    </script>
+  </body>
+</html>

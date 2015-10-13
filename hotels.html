@@ -1,0 +1,253 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Accommodation | From the Front 2012: The Treasure of FrontEnd Island, Front-End Conference</title>
+
+	<meta name="description" content="From the Front 2012: The Treasure of FrontEnd Island, Front-End Conference">
+	<meta name="author" content="Emanuele Rodriguez - erodri.com">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="image_src" href="img/logo_tofel.png" />
+	<link rel="shortcut icon" href="/static/favicon.ico">
+
+	<link rel="stylesheet" href="css/internal.css?ver=5">
+
+	<script src="js/libs/modernizr.custom.js?v=1"></script>
+	<script src="js/libs/prefixfree.min.js"></script>
+	<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+</head>
+
+<body class="p-accommodation">
+
+	<!-- toggle animations flag -->
+	<input type="checkbox" name="stopAnim" id="stopAnim">
+
+	<div id="page">
+
+		<header class="s-header" role="banner">
+
+			<div id="clouds">
+				<span class="cloud c1"></span>
+				<span class="cloud c2"></span>
+				<span class="cloud c3"></span>
+			</div>
+
+			<div id="treasure">
+				<a class="logo" href="index.html" title="Go to the home page">
+					<img src="img/int/hdr_logo_tofel.png" itemprop="image" alt="The Treasure of FrontEnd Island - Front End Conference" />
+				</a>
+				<div itemprop="summary" class="summary">The Treasure of FrontEnd Island</div>
+				<h1 itemprop="eventType" class="eventType">Front End Conference</h1>
+			</div>
+
+			<nav role="navigation" class="n-main">
+				<a class="nav-title" href="#">Menu</a>
+				<ul class="nav-list">
+					<li class="nav-item"><a href="index.html">Home</a></li>
+					<li class="nav-item"><a href="info.html">Info</a></li>
+					<li class="nav-item"><a href="schedule.html">Schedule</a></li>
+					<li class="nav-item"><a href="speakers.html">Speakers</a></li>
+					<li class="nav-item"><a href="workshops.html">Workshops</a></li>
+					<!-- <li class="nav-item is-selected"><a href="hotels.html">Accommodation</a></li> -->
+					<li class="nav-item"><a href="index.html#cart">Get your ticket!</a></li>
+				</ul>
+			</nav>
+
+		</header>
+
+
+		<div id="main" role="main" class="s-main">
+
+			<div class="m-title">
+				<h1 class="title accommodation">Accommodation</h1>
+			</div> <!-- /.m-title -->
+
+			<div class="m-map">
+				<div class="intro">
+					<p>Looking for a good hotel to attend Frontend Island? We found a few at discounted rates for you.</p>
+				</div>
+
+				<div class="map" id="map"></div>
+
+				<div class="info">
+					<ul class="info-list">
+						<li class="info-item">
+							<h2 class="title">Services included in rate</h2>
+							<ul class="sub-list">
+								<li class="sub-item">Extensive breakfast buffet</li>
+							</ul>
+						</li>
+						<li class="info-item">
+							<h2 class="title">Booking conditions</h2>
+							<ul class="sub-list">
+								<li class="sub-item">Booking on-line</li>
+								<li class="sub-item">
+									<p>By phone, fax or e-mail with the "booking office of the Bologna Art Hotel, referring to event. Here are the details:</p>
+									<p>
+									<span class="name">Information Point Bologna Art Hotels</span><br>
+									Phone: +39 051 7457637<br>
+									Fax: +39 051 7457622<br>
+									Email: <a href="mailto:arthotels1@inbo.it">arthotels1@inbo.it</a>
+									</p>
+								</li>
+							</ul>
+						</li>
+						<li class="info-item">
+							<h2 class="title">Warranty</h2>
+							<p>Will request a credit card to guarantee each reservation</p>
+						</li>
+						<li class="info-item">
+							<h2 class="title">Payment</h2>
+							<p>Guests will repay directly to the hotel on departure</p>
+						</li>
+						<li class="info-item">
+							<span class="title">Cancellations</span>
+							<p>Reservations may be canceled without penalty until 31 August inclusive. After that date, will incur a penalty equal to 100%</p>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+				<script>
+
+				//<![CDATA[
+				// Resize iframe to full height
+				function resizeIframe(height) {
+					document.getElementById('portalgenius').height = parseInt(height);
+					window.scrollTo(0,0);
+				}
+				var V = String.fromCharCode(34);
+				var L = String.fromCharCode(60);
+				var G = String.fromCharCode(62);
+				document.write(L+'i'+'frame id='+V+'portalgenius'+V+' src='+V+'http://portal.bookingenius.it/fromthefront2012/en/hotels/index'+V+' frameborder='+V+'0'+V+' scrolling='+V+'yes'+V+' marginheight='+V+'0px'+V+' marginwidth='+V+'0px'+V+' height='+V+'760'+V+' width='+V+'1000'+V+''+G+L+'/i'+'frame'+G);
+				//]]>
+
+				//map
+				var initialize = function() {
+					var ftfMaps = [
+						{
+							x:44.488704,
+							y:11.348119,
+							// icon:'ftf_mark.png',
+							tooltip: '<div id="tooltip">'+
+							'<img width="200" src="img/int/hdr_logo_tofel.png"></img>' +
+							'<br><strong>TEATRO DUSE</strong><br>'+
+							'Via Cartoleria 42, Bologna<br>'+
+							'<a href="http://www.teatrodusebologna.it/" target="_blank">http://www.teatrodusebologna.it</a>'+
+							'</div>'
+						}
+					];
+					var center = new google.maps.LatLng(44.49419,11.346519 );
+					var options = {
+					    zoom: 14,
+					    center: center,
+					    mapTypeId: google.maps.MapTypeId.ROADMAP
+					};
+					var map = new google.maps.Map(document.getElementById('map'), options);
+
+					nMaps = ftfMaps.length;
+					for(i = 0; i < nMaps; i++){
+						var latlng = new google.maps.LatLng(ftfMaps[i].x, ftfMaps[i].y);
+						var marker = new google.maps.Marker({
+							position: latlng,
+							map: map,
+							icon: ftfMaps[i].icon,
+							flat: true
+						});
+
+						marker.tooltip = ftfMaps[i].tooltip
+						google.maps.event.addListener(marker, 'click', function(a,b) {
+							var infowindow = new google.maps.InfoWindow({
+								content: this.tooltip
+							});
+							infowindow.open(map,this);
+						});
+					}
+
+					setTimeout(function() {
+						var infowindow = new google.maps.InfoWindow({
+							content: ftfMaps[0].tooltip
+						});
+						infowindow.open(map,marker);
+					}, 1000);
+				}
+				window.onload = initialize;
+				</script>
+
+			</div> <!-- /.m-map -->
+
+		</div> <!-- /#main -->
+
+		<footer class="s-footer">
+			<div id="horizon">
+				<div id="ground"></div>
+				<div id="ship">
+					<span class="silhouette"></span>
+					<span class="shadow"></span>
+				</div>
+				<div id="smoke">
+					<span class="puff p1"></span>
+					<span class="puff p2"></span>
+					<span class="puff p3"></span>
+					<span class="puff p4"></span>
+					<span class="puff p5"></span>
+ 					<span class="puff p6"></span>
+					<span class="puff p7"></span>
+					<span class="puff p8"></span>
+					<span class="puff p9"></span>
+					<span class="puff p10"></span>
+					<span class="puff p11"></span>
+					<span class="puff p12"></span>
+				</div>
+			</div>
+
+			<ul class="m-authors">
+				<li class="author">Illustrated by <a rel="author nofollow" href="http://www.lorenzograndi.it" class="external" title="Lorenzo Grandi">Lorenzo Grandi</a></li>
+				<li class="author">Developed by <a href="http://www.andreaverlicchi.eu" class="external" title="Andrea Verlicchi - Web developer with a passion for front-end">Andrea Verlicchi</a>, <a rel="author nofollow" href="http://www.erodri.com" class="external" title="Emanuele Rodriguez - Nomad developer">Emanuele Rodriguez</a>, <a rel="author nofollow" href="http://about.me/fabbrucci" class="external" title="Fabio Fabbrucci">Fabio Fabbrucci</li>
+				<li class="author">Design by <a rel="author" href="http://fromthefront.it" class="external" title="From The Front">From The Front</a></li>
+			</ul>
+
+			<ul class="m-corp">
+				<li class="link"><a class="external" href="http://fromthefront.it">FROMTHEFRONT.IT</a></li>
+				<li class="link"><a href="https://www.iubenda.com/privacy-policy/155299" class="iubenda-nostyle" id="iubenda-embed" title="Privacy Policy">Privacy Policy</a><script>(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; w.addEventListener ? w.addEventListener("load", loader, false) : w.attachEvent("onload", loader);})(window, document);</script></li>
+			</ul>
+
+		</footer>
+
+		<label id="toggleAnimations" for="stopAnim">Toggle animations</label>
+
+	</div> <!-- /#page -->
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js?v=1"></script>
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.8.1.min.js"><\/script>')</script>
+
+	<!-- Scope -->
+	<script src="js/common.js?v=2"></script>
+	<script src="js/internal.scope.js?v=3"></script>
+
+	<!-- GA -->
+	<script>
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-240287-21']);
+	_gaq.push(['_setDomainName', 'fromthefront.it']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+	</script>
+	<script src="js/ios-orientationchange-fix.js"></script>
+	<!--[if lt IE 7 ]>
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+		<script type="text/javascript">window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
+</body>
+</html>

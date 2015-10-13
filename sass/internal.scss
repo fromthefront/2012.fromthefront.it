@@ -1,0 +1,68 @@
+/* ==|== Frontend Island styles =============================================
+   Author: Emanuele Rodriguez <me@erodri.com>
+   ========================================================================== */
+
+
+// Breakpoints
+
+@import "breakpoints.scss";
+
+
+// Colors
+
+@import "colors.scss";
+
+
+// Fonts definitions
+
+@import "fonts.scss";
+
+
+// Default values
+
+$default-bg-color:  $blue-sea;
+$default-fg-color:  $grey-text;
+$default-sel-color: $blue-bar;
+
+$default-font-size:   13px;
+$default-font-family: Verdana, Arial, Helvetica, sans-serif;
+$pirate-font-family:  CaslonAntiqueRegular, sans-serif;
+$serif-font-family:   'Times New Roman', Times, serif;
+
+
+// Mixins
+
+@import "mixins.scss";
+
+
+// Reset styles
+
+@import "h5bp-bootstrap.scss";
+
+
+// Base classes
+
+@import "int-base.scss";
+
+
+// Debug module (optional)
+// @import "base-debug.scss";
+
+
+// Media queries
+
+// @media only screen and (min-width: $bp-tablet)  { @import "int-tablet.scss"; }
+// @media only screen and (min-width: $bp-desktop) { @import "int-desktop.scss"; }
+@media #{$tablet-up}  { @import "int-tablet.scss"; }
+@media #{$desktop-up} { @import "int-desktop.scss"; }
+
+
+// Styles used by external modules
+
+// @import "style.scss";
+
+
+// Print styles
+// Inlined to avoid required HTTP connection: h5bp.com/r
+
+@media print { @import "print.scss"; }

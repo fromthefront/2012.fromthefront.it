@@ -1,0 +1,33 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+/* TEAM */
+  Art Director: Diego Sessa
+  Twitter: @diesign
+  Location: Modena, Italy
+
+  Illustrations: Lorenzo Grandi
+  Site: www.lorenzograndi.it
+  Location: Bologna, Italy
+
+  Web Interface Developer: Andrea Verlicchi
+  Site: www.andreaverlicchi.eu
+  Twitter: @verlok
+  Location: Bologna, Italy
+
+  Web Interface Developer: Emanuele Rodriguez
+  Site: www.erodri.com
+  Twitter: @erodrix
+  Location: Barcelona, Spain
+
+  Web Interface Developer: Luca Salvini
+  Site: www.lucasalvini.com
+  Location: Zocca, Italy
+
+  Web Interface Developer: Fabio Fabbrucci
+  Site: about.me/fabbrucci
+  Location: Riccione, Italy
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Modernizr, PrefixFree

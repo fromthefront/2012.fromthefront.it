@@ -1,0 +1,67 @@
+$mobile-min:   320px;
+$mobile-max:   599px;
+
+$tablet-min:   600px;
+$tablet-max:   899px;
+
+$desktop-min:  900px;
+$desktop-max: 1279px;
+
+$wide-min:    1280px;
+$wide-max:    9999px;
+
+$mobile-up:    "only screen and (min-width: #{$mobile-min})";//";
+$mobile:       "only screen and (min-width: #{$mobile-min}) and (max-width: #{$mobile-max})";//";
+$mobile-down:  "only screen and (max-width: #{$mobile-max})";//";
+
+$tablet-up:    "only screen and (min-width: #{$tablet-min})";//";
+$tablet:       "only screen and (min-width: #{$tablet-min}) and (max-width: #{$tablet-max})";//";
+$tablet-down:  "only screen and (max-width: #{$tablet-max})";//";
+
+$desktop-up:   "only screen and (min-width: #{$desktop-min})";//";
+$desktop:      "only screen and (min-width: #{$desktop-min}) and (max-width: #{$desktop-max})";//";
+$desktop-down: "only screen and (max-width: #{$desktop-max})";//";
+
+$wide-up:      "only screen and (min-width: #{$wide-min})";//";
+$wide:         "only screen and (min-width: #{$wide-min}) and (max-width: #{$wide-max})";//";
+$wide-down:    "only screen and (max-width: #{$wide-max})";//";
+
+$hidpi:        "only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+                only screen and (   -moz-min-device-pixel-ratio: 1.5),
+                only screen and (     -o-min-device-pixel-ratio: 3/2),
+                only screen and (        min-device-pixel-ratio: 1.5)";//";
+
+
+// $mobile-min:      128px;
+// $mobile-max:      319px;
+// $smartphone-min:  320px;
+// $smartphone-max:  479px;
+// $tablet-min:      480px;
+// $tablet-max:     1023px;
+// $laptop-min:     1024px;
+// $laptop-max:     1279px;
+// $desktop-min:    1280px;
+// $desktop-max:    9999px;
+
+// $mobile-up:   "only screen and (min-width: #{$mobile-min})";//"";
+// $mobile:      "only screen and (min-width: #{$mobile-min}) and (max-width: #{$mobile-max})";//"";
+// $mobile-down: "only screen and (max-width: #{$mobile-max})";//"";
+
+
+// ///////////////////////////////////// OLD BREAKPOINTS - DEPRECATED
+// $bp-mobile:   320px;
+// $bp-tablet:   600px;
+// $bp-desktop:  900px;
+// $bp-wide:    1280px;
+
+// $mq-mobile:  "only screen and (min-width: #{$bp-mobile})";//";
+// $mq-tablet:  "only screen and (min-width: #{$bp-tablet})";//";
+// $mq-desktop: "only screen and (min-width: #{$bp-desktop})";//";
+// $mq-wide:    "only screen and (min-width: #{$bp-wide})";//";
+
+// $mq-hidpi:   "only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+//               only screen and (   -moz-min-device-pixel-ratio: 1.5),
+//               only screen and (     -o-min-device-pixel-ratio: 3/2),
+//               only screen and (        min-device-pixel-ratio: 1.5)";//";
+
+

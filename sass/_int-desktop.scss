@@ -1,0 +1,105 @@
+//*********************
+//*   base elements   *
+//*********************
+
+body {
+}
+
+
+
+
+// generic elements
+
+.item-button {
+}
+
+
+
+
+//*******************
+//*   page layout   * 
+//*******************
+
+#page {
+}
+
+
+.s-header {
+
+	#treasure {
+	}
+}
+
+
+
+
+//******************
+//*   navigation   *
+//******************
+
+.n-main {
+	font-size: 1.4em;
+	right: 0;
+	padding: 0;
+	top: 2.4em;
+	width: pxpc(720, 960);
+	height: auto;
+
+	.nav-list {
+		// margin-right: -2.3em;
+		text-align: right;
+	}
+
+	.nav-item {
+		&.is-selected {
+			a {
+				color: white;
+			}
+		}
+	}
+}
+
+
+
+
+
+//***************
+//*   modules   *
+//***************
+
+
+.m-speakers {
+	padding: 0;
+
+	.info {
+		overflow: hidden;
+	}
+
+	.speaker {
+		// background-position: pxpc(240) 0;
+		float: left;
+		margin-left: pxpc(240, 940);
+		width: pxpc(280, 940);
+	}
+
+	.event {
+		float: left;
+		padding-left: pxpc(20, 940);
+		width: pxpc(400, 940);
+	}
+}
+
+
+
+
+
+//***********************
+//*      animations     *
+//***********************
+
+
+
+
+//***********************
+//*   external modules  *
+//***********************

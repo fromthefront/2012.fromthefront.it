@@ -1,0 +1,199 @@
+//*********************
+//*   base elements   *
+//*********************
+
+body {
+}
+
+
+
+
+// generic elements
+
+.item-button {
+}
+
+
+
+
+//*******************
+//*   page layout   * 
+//*******************
+
+#page {
+}
+
+
+.s-header {
+margin-top: -32px;
+
+	#treasure {
+		top: 3.9em;
+		left: auto;
+		margin-left: 0;
+		width: pxpc(220, 980);
+	}
+}
+
+
+
+.s-main {
+}
+
+
+
+.s-footer {
+}
+
+
+
+
+//******************
+//*   navigation   *
+//******************
+
+.n-main {
+	font-size: 1.4em;
+	right: 0;
+	padding: 0;
+	top: 4.2em;
+	width: pxpc(720, 980);
+	height: auto;
+
+	.nav-list {
+		// margin-right: -2.3em;
+		text-align: right;
+	}
+}
+
+
+
+.n-corp {
+}
+
+
+
+
+
+//***************
+//*   modules   *
+//***************
+
+.m-authors,
+.m-corp {
+
+	.author,
+	.link {
+		display: inline-block;
+		margin-left: .5em;
+		padding: 0;
+
+		&:before {
+			content: '|';
+			margin-right: .7em;
+		}
+
+		&:first-child {
+			margin-left: 0;
+
+			&:before {
+				content: none;
+			}
+		}
+	}
+}
+
+
+
+.fireplace {
+}
+
+
+
+.m-workshops {
+	// body.disableAnimations &,
+	#stopAnim:checked + #page & {
+		background-position: 51.5% 105px;
+	}
+
+
+	.workshop {
+		// overflow: hidden;
+		&.balkankalbag {
+
+			.image {
+				background-position: center 98.5%;
+				// top: -20px;
+				top: -25px;
+				left: -2%;
+				right: auto;
+				width: 275px;
+			}
+		}
+
+		&.stevekrug {
+
+			.image {
+				background-position: center 97%;
+				// top: -15px;
+				left: auto;
+				right: 55%;
+				top: -45px;
+				width: 174px;
+			}
+		}
+
+		&.remysharp {
+
+			.image {
+				background-position: center 98%;
+				// top: -15px;
+				left: 57%;
+				right: auto;
+				top: -50px;
+				width: 182px;
+			}
+		}
+
+		&.leaverou {
+
+			.image {
+				background-position: center 98.5%;
+				// top: -1px;
+				top: -5px;
+				left: auto;
+				right: -2%;
+				width: 245px;
+			}
+		}
+
+		.instructors {
+			float: left;
+			width: pxpc(280, 940);
+		}
+
+		.event,
+		.ticket {
+			float: right;
+			width: pxpc(640, 940);
+			// width: 640px;
+		}
+	}
+}
+
+
+#cart {
+	text-align: right;
+}
+
+
+//***********************
+//*      animations     *
+//***********************
+
+
+
+
+//***********************
+//*   external modules  *
+//***********************

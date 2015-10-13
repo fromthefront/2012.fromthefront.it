@@ -1,0 +1,222 @@
+@font-face {
+    font-family: 'ConduitSCITCExtraLight';
+    src: url('hotels/it153___-webfont.eot');
+    src: url('hotels/it153___-webfont.eot?#iefix') format('embedded-opentype'),
+         url('hotels/it153___-webfont.woff') format('woff'),
+         url('hotels/it153___-webfont.ttf') format('truetype'),
+         url('hotels/it153___-webfont.svg#ConduitSCITCExtraLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+* {margin:0;padding:0;font-weight:normal;font-style:normal;}
+html, body {height:100%;}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px auto;
+    width: 1000px;
+}
+
+a, a:visited {
+    color:rgb(91, 91, 91);
+}
+
+a:hover {
+    color:rgb(130, 207, 223);
+}
+
+td{
+    border:1px solid #ccc;
+    font-size:14px;
+}
+
+header {
+    height: 150px;
+    background: url(imgs/headerBg.jpg) no-repeat;
+    width:100%;
+    position: relative;
+}
+
+header #nuvola1{
+    background: url(imgs/nuvola_1.png) no-repeat;
+    left: -21px;
+    top: 23px;
+}
+
+header #nuvola2{
+    background: url(imgs/nuvola_2.png) no-repeat;
+    left:46%;
+    top:66px;
+} 
+
+header #nuvola3{
+    background: url(imgs/nuvola_3.png) no-repeat;
+  right: -40px;
+    top: 54px;
+}  
+
+header .nuvola{
+    position:absolute;
+    height:80px;
+    width:200px;
+    z-index:2;
+}
+
+header .logo {
+    background: url(imgs/logo_.png) no-repeat;
+    height: 147px;
+    width: 265px;
+    margin-bottom: 20px;
+    position: absolute;
+    top: -8px;
+    left: -19px;
+    z-index:3;
+}
+
+#tableTitle, #info{
+    font-size:12px;
+    margin-bottom:5px;
+}
+
+#info{
+    font-size:10px;
+}
+
+#servizi{
+    margin-top:10px;
+    font-size:14px;
+
+}
+.liContent{
+    padding-left: 16px;
+    display: block;
+}
+
+.liService{
+    margin-bottom:10px;
+    font-size: 12px;
+}
+
+.liService li{
+    background: url('imgs/tondo.png') 0 3px no-repeat;
+    padding: 0 16px;
+}
+
+.liService li.info{
+    background:none;
+    padding-top:10px;
+}
+
+.liService li.info .titleMini{
+    font-style:italic;    
+}
+
+.liService .title{
+    text-transform:uppercase;
+    color:#000;
+    background: url('imgs/arrow.png') 0 2px no-repeat;
+    padding-left: 16px;
+    line-height: 20px;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+#acc{
+    background: #C1E2E8;
+    height: 26px;
+    line-height: 26px;
+    color: black;
+    padding: 2px 0 2px 95px;
+    display: block;
+}
+
+#pageTitle{
+    height: 60px;
+    position: relative;
+}
+
+#loghino{
+    background: url('imgs/chiave.png') no-repeat;
+    width: 76px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    top: -12px;
+    left: 9px;
+}
+
+#portalgenius{
+    margin-top:86px;
+    border: 2px solid #044F89;
+}
+
+#listContainer{
+    margin-bottom:52px;
+    float:left;
+    width:450px;
+    padding:10px;
+    font-family:'Verdana';
+    font-size:13px;
+    color:#4b4a4a;
+}
+
+#intro{
+    font-family:'Verdana';
+    font-size:13px;
+    margin-bottom: 30px;
+}
+
+footer {
+    background: url('imgs/footer.png') no-repeat;
+    height: 92px;   
+    width:100%;
+    margin-top: 60px;
+    position: relative;
+}
+footer .island {
+    background: url('imgs/isola.png') no-repeat;
+   position: absolute;
+    height: 125px;
+    width: 419px;
+    top: -59px;
+    left: 235px;
+}
+
+footer .nave {
+    background: url('imgs/nave.png') no-repeat;
+    position: absolute;
+    height: 71px;
+    width: 150px;
+    top: -22px;
+    left: 646px;
+} 
+footer .info {
+    color: white;
+    font-size: 11px;
+    position: absolute;
+    left: 287px;
+    top: 62px;
+    text-align: center;
+}
+
+footer .info a{
+    color: white;
+    }
+footer .link {
+    color: #5b5b5b;
+    float: right;
+    font-size: 11px;
+    margin: 50px 15px;
+}
+
+#map { 
+    width:520px;
+    height:442px;
+    float:left;
+}
+
+#tooltip{
+    font-size:12px;
+}
